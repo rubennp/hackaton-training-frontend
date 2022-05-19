@@ -1,5 +1,6 @@
 import { Row, Form} from 'react-bootstrap';
 // import RowStyled from "../components/RowStyled";
+import { districtes, tipusNegoci } from '../data';
 
 const Home = () => {
     return (
@@ -14,18 +15,22 @@ const Home = () => {
                         <Form.Text>Quin negoci?</Form.Text>
                         <Form.Select>
                             <option>Qualsevol</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                            {tipusNegoci.sort().map(tipus => {
+                                return (
+                                    <option>{tipus}</option>
+                                );
+                            })}
                         </Form.Select>
                     </Form.Group>
                     <Form.Group>
-                        <Form.Text>Tria un barri:</Form.Text>
+                        <Form.Text>Tria un districte:</Form.Text>
                         <Form.Select>
                             <option>Qualsevol</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                            {districtes.sort().map(districte => {
+                                return (
+                                    <option>{districte}</option>
+                                );
+                            })}
                         </Form.Select>
                     </Form.Group>
                     <Form.Group>

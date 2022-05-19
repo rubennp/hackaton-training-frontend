@@ -9,8 +9,8 @@ const Layout = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav>  
-              <Nav.Link href="/registre">Registre</Nav.Link>
-              <Button variant="primary">Login</Button>
+              <Nav.Item><Nav.Link href="registre">Registre</Nav.Link></Nav.Item>
+              <Button href="login" variant="primary">Login</Button>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

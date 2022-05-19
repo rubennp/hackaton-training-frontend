@@ -15,8 +15,11 @@ const App = () => {
       </Navbar>
       <Container className="my-4">
         <Row className="justify-content-center">
-          <h1>Vull iniciar un negoci a Barcelona!</h1>
+          <h1>Vull iniciar un negoci a Barcelona</h1>
           <h2>Busca el millor local</h2>
+        </Row>
+        <Row>
+          
         </Row>
       </Container>
     </>

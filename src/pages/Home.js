@@ -1,13 +1,26 @@
-import { Row, Form} from 'react-bootstrap';
-// import RowStyled from "../components/RowStyled";
+import { Row, Form, Col } from 'react-bootstrap';
+import LinkStyled from '../components/LinkStyled';
+
 import { districtes, tipusNegoci } from '../data';
 
 const Home = () => {
     return (
         <>
-            <Row className="p-4 bg-light">
-                <h1 className="text-center">Vols crear un negoci a Barcelona?<br/>Necesites un local?</h1>
-                <h2 className="text-center">T'ajudem a trobar-lo!</h2>
+            <Row className="p-4 mb-5 bg-light">
+                <h1 className="text-center">Vols obrir un negoci a Barcelona?</h1>
+                <p className="lead">T'ajudem a buscar un local buit o a saber quins tipus de negocis tens aprop</p>
+            </Row>
+            <Row>
+                <Col>
+                    <LinkStyled color="var(--bs-orange)" href="locals-actius">
+                        <span>Busca locals buits</span>
+                    </LinkStyled>
+                </Col>
+                <Col>
+                    <LinkStyled color="var(--bs-yellow)" href="locals-buits">
+                        <span>Busca negocis actius</span>
+                    </LinkStyled>
+                </Col>    
             </Row>
             <Row>
                 <Form>

@@ -1,28 +1,19 @@
-import { Container, Nav, Navbar, Button, Row } from 'react-bootstrap';
+import { Routes, Route } from 'react-router-dom';
+
+import Layout from './Layout';
+import Home from './pages/Home';
+import Registre from './pages/Registre';
+import Login from './pages/Login';
 
 const App = () => {
   return (
-    <> 
-      <Navbar bg="light" styicky="top" expand="lg" className="px-4">
-        <Navbar.Brand href="#">Brand</Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav>  
-            <Nav.Link href="#">Registre</Nav.Link>
-            <Button variant="primary">Login</Button>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      <Container className="my-4">
-        <Row className="justify-content-center">
-          <h1>Vull iniciar un negoci a Barcelona</h1>
-          <h2>Busca el millor local</h2>
-        </Row>
-        <Row>
-          
-        </Row>
-      </Container>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="registre" element={<Registre />} />
+        <Route path="login" element={<Login />} />
+      </Route>
+    </Routes>
   );
 };
 

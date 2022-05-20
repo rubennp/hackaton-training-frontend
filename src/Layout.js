@@ -1,7 +1,5 @@
-import { Nav, Navbar, Button, Row } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
-
-import Content from './components/Content';
 
 const Layout = () => {
     return (
@@ -16,11 +14,11 @@ const Layout = () => {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Content className="my-4">
+        <Container className="my-4">
           <Row className="justify-content-center">
             <Outlet />
           </Row>
-        </Content>
+        </Container>
       </>
     );
 };

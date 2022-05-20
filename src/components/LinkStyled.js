@@ -15,6 +15,7 @@ const LinkStyled = styled.a`
 
     &:hover {
         cursor: pointer;
+        color: ${props => props.color === "var(--bs-orange)" ? "var(--bs-yellow)" : "var(--bs-orange)"};
         text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
         box-shadow: inset 0px 2px 10px rgba(0, 0, 0, 0.2);
     }
